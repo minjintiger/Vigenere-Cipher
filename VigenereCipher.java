@@ -39,6 +39,8 @@ public class VigenereCipher {
                 break;
             }
         }
+
+        inputScanner.close();
     }
     // This function will take a string and print the encrypted string
     private static void encryption(String key, Scanner inputScanner){
@@ -52,6 +54,7 @@ public class VigenereCipher {
         inputString = inputString.toUpperCase();
         String encryptedString = "";
         int keyIndex = 0;
+        // Add the key to the string
         for(int i = 0; i < inputString.length(); i++){
             char c = inputString.charAt(i);
             if(c >= 'A' && c <= 'Z'){
@@ -76,6 +79,7 @@ public class VigenereCipher {
         inputString = inputString.toUpperCase();
         String decryptedString = "";
         int keyIndex = 0;
+        // Subtract the key from the string
         for(int i = 0; i < inputString.length(); i++){
             char c = inputString.charAt(i);
             if(c >= 'A' && c <= 'Z'){
